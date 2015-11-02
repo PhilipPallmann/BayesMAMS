@@ -1,0 +1,4 @@
+import(mvtnorm)
+import(rootSolve)
+
+export(ssbayes)

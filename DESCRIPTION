@@ -1,0 +1,11 @@
+Package: BayesMAMS
+Type: Package
+Title: Designing Bayesian Multi-Arm Multi-Stage Studies
+Version: 0.1
+Date: 2015-11-02
+Author: Philip Pallmann
+Maintainer: Philip Pallmann <p.pallmann@lancaster.ac.uk>
+Description: Calculating Bayesian sample sizes for multi-arm trials where several experimental treatments are compared to a common control, perhaps even at multiple stages.
+License: GPL (>= 2)
+Imports: mvtnorm, rootSolve
+URL: https://github.com/PhilipPallmann/BayesMAMS
