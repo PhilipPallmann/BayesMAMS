@@ -19,7 +19,7 @@ License: \tab GPL (>= 2)\cr
 Function \code{ssbayes} finds Bayesian sample sizes for multi-arm trials given some criteria described in Whitehead et al. (2015).
 }
 \author{
-Philip Pallmann
+Philip Pallmann, Amanda Turner
 
 Maintainer: Philip Pallmann <p.pallmann@lancaster.ac.uk>
 }

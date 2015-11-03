@@ -2,6 +2,7 @@
 
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{doi}
 \usepackage{parskip}
 \usepackage{natbib}
 \bibpunct{(}{)}{;}{a}{}{,}
@@ -70,6 +71,14 @@ ssfreq_dun <- ((quan + qnorm(power)) / (sqrt(nu) * deltastar))^2 * (1 + 1/alloc)
 ceiling(c(sqrt(k) * ssfreq_dun, rep(ssfreq_dun, k)))
 @
 
+The Dunnett sample size can also be computed with the package \texttt{MAMS}, which requires to reparameterize $\delta^*$ as $p^*=\Phi\left(\frac{\delta^*}{\sqrt{2 \sigma^2}}\right)$ first.
+
+<<message=FALSE>>=
+library("MAMS")
+pstar <- pnorm(deltastar / sqrt(2 * 1/nu))
+mams(K=k, J=1, r=1, r0=alloc, p=pstar, p0=0.5)
+@
+
 \subsection*{Criterion 2}
 
 The posterior probability of \underline{at least one (any)} experimental treatment being better than control is at least $\eta$, or else the posterior probability of none of the treatments being better than control (by a relevant margin $\delta^*$) is at least $\zeta$.
@@ -95,8 +104,10 @@ ceiling(c(sqrt(k) * ssfreq_unadj, rep(ssfreq_unadj, k)))
 
 \section*{References}
 
-Dunnett CW (1955) A multiple comparison procedure for comparing several treatments with a control. \textit{Journal of the American Statistical Association}, \textbf{50}(272), 1096--1121.
+Dunnett CW (1955) A multiple comparison procedure for comparing several treatments with a control. \textit{Journal of the American Statistical Association}, \textbf{50}(272), 1096--1121. \doi{10.1002/sim.6469}.
 
-Whitehead J, Cleary F, Turner A (2015) Bayesian sample sizes for exploratory clinical trials comparing multiple experimental treatments with a control. \textit{Statistics in Medicine}, \textbf{34}(12), 2048-–2061.
+Jaki T, Magirr D, Pallmann P (2015) MAMS: Designing multi-arm multi-stage studies. R package, version 0.6. \href{http://CRAN.R-project.org/package=MAMS}{http://CRAN.R-project.org/package=MAMS}.
+
+Whitehead J, Cleary F, Turner A (2015) Bayesian sample sizes for exploratory clinical trials comparing multiple experimental treatments with a control. \textit{Statistics in Medicine}, \textbf{34}(12), 2048--2061. \doi{10.2307/2281208}.
 
 \end{document}
