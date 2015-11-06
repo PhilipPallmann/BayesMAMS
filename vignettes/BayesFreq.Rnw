@@ -106,7 +106,7 @@ ceiling(c(sqrt(k) * ssfreq_unadj, rep(ssfreq_unadj, k)))
 
 Dunnett CW (1955) A multiple comparison procedure for comparing several treatments with a control. \textit{Journal of the American Statistical Association}, \textbf{50}(272), 1096--1121. \doi{10.1002/sim.6469}.
 
-Jaki T, Magirr D, Pallmann P (2015) MAMS: Designing multi-arm multi-stage studies. R package, version 0.6. \href{http://CRAN.R-project.org/package=MAMS}{http://CRAN.R-project.org/package=MAMS}.
+Jaki T, Magirr D, Pallmann P (2015) MAMS: Designing multi-arm multi-stage studies. R package, version 0.7. \href{http://CRAN.R-project.org/package=MAMS}{http://CRAN.R-project.org/package=MAMS}.
 
 Whitehead J, Cleary F, Turner A (2015) Bayesian sample sizes for exploratory clinical trials comparing multiple experimental treatments with a control. \textit{Statistics in Medicine}, \textbf{34}(12), 2048--2061. \doi{10.2307/2281208}.
 
